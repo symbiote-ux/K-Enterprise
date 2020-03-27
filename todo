@@ -1,0 +1,17 @@
+Product Details :
+
+=> weight in kgs;
+
+Data Structure:
+{ product_1 : { noOfRolls : 2 , weight : 4 , readyProductWeight: 1 }}
+
+
+Client Details:
+
+Data Structure:
+
+{ clientName_1 : { personalDetails : { shopName : "xyz" , shopAddress : "abc" , contactNo : 1234 } , 
+  productDetails : { transaction_1 : 
+  { product_1 : { weight : 1 } , product_2 : { weight : 2} , pricePerKg : 80 , totalAmount : 2000 , amountPaid : 1500 , amountRemaining : 500 },
+  transaction_2:{} }},
+  clientName_2 : {}}
