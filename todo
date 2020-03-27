@@ -10,8 +10,40 @@ Client Details:
 
 Data Structure:
 
-{ clientName_1 : { personalDetails : { shopName : "xyz" , shopAddress : "abc" , contactNo : 1234 } , 
-  productDetails : { transaction_1 : 
-  { product_1 : { weight : 1 } , product_2 : { weight : 2} , pricePerKg : 80 , totalAmount : 2000 , amountPaid : 1500 , amountRemaining : 500 },
-  transaction_2:{} }},
-  clientName_2 : {}}
+{ clientName_1 :
+          { personalDetails : 
+                 { shopName : "xyz" , shopAddress : "abc" , contactNo : 1234 } , 
+            productDetails : [
+              transaction_1 : 
+                 { products : [ {name:  product_1 , weight : 3 }, 
+                                { name : product_2 , weight : 4 }] , 
+                   pricePerKg : 80 , 
+                   totalAmount : 2000 ,
+                   amountPaid : 1500 ,
+                   amountRemaining : 500 , 
+                   date:"123"},
+              transaction_2:{} 
+                 ]
+             totalAmountDue:230
+            },
+  clientName_2 : {}
+}
+
+
+when client is present =>{
+  requirement :
+  product_1: 5kg,
+  product_5 : 3kg,
+  product_4 : kg,
+  save+++
+}
+
+when client is new => {
+  personalDetails:=>
+                    clientName,
+                    shopName,
+                    shopAddress,
+                    contactNo,
+                    pricePerKg 
+                    save++            
+}
