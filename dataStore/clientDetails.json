@@ -1,0 +1,33 @@
+{
+  "Drishya": {
+    "Personal_Details": {
+      "Shop_Name": "abcd",
+      "Address": "abcd",
+      "Contact_No": 1234
+    },
+    "Product_Details": [
+      {
+        "Products": [
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_2", "Weight": 5 }
+        ],
+        "Price": 80,
+        "Total_Amount": 2000,
+        "Amount_Paid": 1500,
+        "Amount_Left": 500,
+        "Date": 123
+      },
+      {
+        "Products": [
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_2", "Weight": 5 }
+        ],
+        "Price": 80,
+        "Total_Amount": 2000,
+        "Amount_Paid": 1500,
+        "Amount_Left": 500,
+        "Date": 123
+      }
+    ]
+  }
+}
