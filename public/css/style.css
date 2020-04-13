@@ -105,10 +105,12 @@
 
 .value {
   height: 50%;
-  width: 48%;
+  width: 40%;
   outline: none;
-  border-bottom: 1px dotted blue;
   margin-left: 2%;
+  border: transparent;
+  font-size: 100%;
+  border-bottom: 1px dotted blue;
 }
 
 .name {
