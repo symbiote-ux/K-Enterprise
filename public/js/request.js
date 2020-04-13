@@ -5,5 +5,3 @@ const productDetails = () => {
       console.log('--------', details);
     });
 };
-
-window.onload = productDetails;

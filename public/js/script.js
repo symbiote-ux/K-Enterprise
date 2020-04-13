@@ -33,6 +33,7 @@ const main = () => {
   createProductBox();
   createClientBox();
   createAddClientBox();
+  productDetails();
 };
 
 window.onload = main;
