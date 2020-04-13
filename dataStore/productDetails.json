@@ -1,0 +1,39 @@
+{
+  "size_1": {
+    "size": "12 x 12",
+    "noOfRolls": 2,
+    "weight": 4,
+    "readyProductWeight": 1
+  },
+  "size_2": {
+    "size": "12 x 12",
+    "noOfRolls": 2,
+    "weight": 4,
+    "readyProductWeight": 1
+  },
+  "size_3": {
+    "size": "12 x 12",
+    "noOfRolls": 2,
+    "weight": 4,
+    "readyProductWeight": 1
+  },
+  "size_4": {
+    "size": "12 x 12",
+    "noOfRolls": 2,
+    "weight": 4,
+    "readyProductWeight": 1
+  },
+  "size_5": {
+    "size": "12 x 12",
+    "noOfRolls": 2,
+    "weight": 4,
+    "readyProductWeight": 1
+  },
+  "size_6": {
+    "size": "12 x 12",
+    "noOfRolls": 2,
+    "weight": 4,
+    "readyProductWeight": 1
+  }
+}
+

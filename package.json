@@ -1,0 +1,27 @@
+{
+  "name": "chauhanEnterprise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/symbiote-ux/K-Enterprise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/symbiote-ux/K-Enterprise/issues"
+  },
+  "homepage": "https://github.com/symbiote-ux/K-Enterprise#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

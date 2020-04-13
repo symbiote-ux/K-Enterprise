@@ -3,7 +3,9 @@ Product Details :
 => weight in kgs;
 
 Data Structure:
-{ product_1 : { noOfRolls : 2 , weight : 4 , readyProductWeight: 1 }}
+{ product_1 : { size:12X12, noOfRolls : 2 , weight : 4 , readyProductWeight: 1 },
+product_2 : { size:12X12, noOfRolls : 2 , weight : 4 , readyProductWeight: 1 },
+}
 
 
 Client Details:
@@ -47,3 +49,6 @@ when client is new => {
                     pricePerKg 
                     save++            
 }
+
+
+* Product Details: ui

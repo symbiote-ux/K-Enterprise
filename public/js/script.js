@@ -20,7 +20,14 @@ const createClientBox = () => {
 };
 
 const createProductBox = () => {
-  const productList = [1, 2, 3, 4, 5, 6];
+  const productList = [
+    'Size-1',
+    'Size-2',
+    'Size-3',
+    'Size-4',
+    'Size-5',
+    'Size-6'
+  ];
   const productBox = document.querySelector('.productBox');
   productList.forEach(product => {
     const box = document.createElement('div');
