@@ -94,7 +94,10 @@
 }
 
 .unit {
-  height: 50%;
-  width: 45%;
-  border: 1px solid black;
+  height: 43%;
+  width: 49%;
+  font-size: 17px;
+  font-family: fantasy;
+  font-weight: 600;
+  margin: 5px 0px 0px 4px;
 }
