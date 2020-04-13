@@ -105,7 +105,10 @@
 
 .value {
   height: 50%;
-  width: 50%;
+  width: 48%;
+  outline: none;
+  border-bottom: 1px dotted blue;
+  margin-left: 2%;
 }
 
 .name {
