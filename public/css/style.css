@@ -100,4 +100,15 @@
   font-family: fantasy;
   font-weight: 600;
   margin: 5px 0px 0px 4px;
+  display: flex;
+}
+
+.value {
+  height: 50%;
+  width: 50%;
+}
+
+.name {
+  height: 50%;
+  width: 50%;
 }
