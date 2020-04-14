@@ -130,24 +130,32 @@
 
 .heading {
   height: 70%;
-  border: 1px solid black;
   display: flex;
-  font-size: 170%;
+  font-size: xx-large;
+  font-family: sans-serif;
 }
 
 .address {
   height: 30%;
-  border: 1px solid saddlebrown;
+  font-size: larger;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.clientName {
-  width: 45%;
+.client-name {
+  width: 30%;
+  padding: 10px 0px 0px 15px;
 }
 
-.amountDue {
-  width: 45%;
+.amount-due {
+  width: 30%;
+  padding-top: 10px;
+  font-weight: 200;
+  color:crimson;
 }
 
 .expand {
-  width: 10%;
+  width: 40%;
+  text-align: end;
+  padding: 10px 25px 0px 0px;
 }

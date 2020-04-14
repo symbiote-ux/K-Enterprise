@@ -11,14 +11,7 @@ const createAddClientBox = () => {
 };
 
 const createProductBox = () => {
-  const productList = [
-    'Size_1',
-    'Size_2',
-    'Size_3',
-    'Size_4',
-    'Size_5',
-    'Size_6'
-  ];
+  const productList = [ 'Size_1', 'Size_2', 'Size_3', 'Size_4', 'Size_5', 'Size_6' ];
   const productBox = document.querySelector('.productBox');
   productList.forEach(product => {
     const box = document.createElement('div');
@@ -32,7 +25,7 @@ const main = () => {
   createProductBox();
   createAddClientBox();
   productDetails();
-  clientsDetail();
+  clientsDetails();
 };
 
 window.onload = main;

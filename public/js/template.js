@@ -1,8 +1,8 @@
 const showClientDetails = details => {
   const clientBox = document.querySelector('.clientInfoBox');
   for (const client in details) {
-    const { Personal_Details, Total_Amount_Due } = details[client];
-    const { Shop_Name, Address, Contact_No } = Personal_Details;
+    const {Personal_Details,Total_Amount_Due} = details[client];
+    const {Shop_Name,Address,Contact_No} = Personal_Details;
     const box = document.createElement('div');
     box.className = 'clientInfo';
     box.id = client;
