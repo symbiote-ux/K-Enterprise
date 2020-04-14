@@ -1,8 +1,1 @@
-{
-  "Size_1": { "Size": "Saurabh", "No_Of_Rolls": 2, "Weight": 4, "Ready": 1 },
-  "Size_2": { "Size": "Chauhan", "No_Of_Rolls": 2, "Weight": 4, "Ready": 1 },
-  "Size_3": { "Size": "12 x 12", "No_Of_Rolls": 2, "Weight": 4, "Ready": 1 },
-  "Size_4": { "Size": "12 x 12", "No_Of_Rolls": 2, "Weight": 4, "Ready": "45" },
-  "Size_5": { "Size": "12 x 12", "No_Of_Rolls": 2, "Weight": 4, "Ready": 1 },
-  "Size_6": { "Size": "12 x 12", "No_Of_Rolls": 2, "Weight": 4, "Ready": 1 }
-}
+{"Size_1":{"Size":"12 X 12","No_Of_Rolls":"2 m","Weight":"5 kg","Ready":"34 kg"},"Size_2":{"Size":"12 X 10","No_Of_Rolls":2,"Weight":4,"Ready":"1 kg"},"Size_3":{"Size":"12 x 12","No_Of_Rolls":2,"Weight":4,"Ready":1},"Size_4":{"Size":"12 x 12","No_Of_Rolls":2,"Weight":4,"Ready":"45"},"Size_5":{"Size":"12 x 12","No_Of_Rolls":2,"Weight":4,"Ready":1},"Size_6":{"Size":"12 x 12","No_Of_Rolls":2,"Weight":4,"Ready":1}}

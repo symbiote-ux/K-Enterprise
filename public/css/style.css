@@ -107,13 +107,23 @@
   height: 50%;
   width: 40%;
   outline: none;
-  margin-left: 2%;
   border: transparent;
   font-size: 100%;
+  color: crimson;
+  text-align: center;
   border-bottom: 1px dotted blue;
 }
 
 .name {
   height: 50%;
   width: 50%;
+}
+
+.name:hover {
+  transform: scale(1.05);
+}
+
+.value:hover {
+  background-color: rgba(132, 39, 219, 0.4);
+  border-radius: 7px;
 }
