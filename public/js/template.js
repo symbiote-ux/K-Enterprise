@@ -29,25 +29,3 @@ const showProductDetails = details => {
     }
   }
 };
-
-const showClientDetails = details => {
-  const clientBox = document.querySelector('.clientInfoBox');
-  for (const client in details) {
-    const { Personal_Details, Total_Amount_Due } = details[client];
-    const box = document.createElement('div');
-    box.className = 'clientInfo';
-    box.id = client;
-    box.innerHTML = `
-      <div class="heading">
-      <div class="clientName">${client}</div>
-      <div class="amountDue">${Total_Amount_Due}</div>
-      <div class="expand">+</div>
-      </div>
-     
-      <div class="address">
-        ${Personal_Details.Shop_Name}, ${Personal_Details.Address},  ${Personal_Details.Contact_No}
-      </div>
-    `;
-    clientBox.appendChild(box);
-  }
-};
