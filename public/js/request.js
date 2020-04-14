@@ -1,7 +1,7 @@
-const clientsDetails = () =>{
+const clientsDetails = () => {
   fetch('/clientsDetail')
-  .then(res => res.json())
-  .then(details => showClientDetails(details));
+    .then(res => res.json())
+    .then(details => showClientDetails(details));
 };
 
 const saveValue = e => {
