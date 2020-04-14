@@ -48,6 +48,7 @@
         "Amount_Paid": 1500,
         "Amount_Left": 500,
         "Time_Stamp": 123
+<<<<<<< HEAD
       },
       {
         "Products": [
@@ -208,6 +209,8 @@
         "Amount_Paid": 1500,
         "Amount_Left": 500,
         "Time_Stamp": 123
+=======
+>>>>>>> updeted clients
       },
       {
         "Products": [
