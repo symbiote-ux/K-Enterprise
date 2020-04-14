@@ -1,3 +1,9 @@
+const clientsDetails = () =>{
+  fetch('/clientsDetail')
+  .then(res => res.json())
+  .then(details => showClientDetails(details));
+};
+
 const saveValue = e => {
   const value = e.target.value;
   const boxId = e.target.parentElement.parentElement.id;

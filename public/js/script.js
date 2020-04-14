@@ -10,15 +10,6 @@ const createAddClientBox = () => {
   addClientBox.appendChild(button);
 };
 
-const createClientBox = () => {
-  const clientBox = document.querySelector('.clientInfoBox');
-  for (let index = 0; index < 10; index++) {
-    const box = document.createElement('div');
-    box.className = 'clientInfo';
-    clientBox.appendChild(box);
-  }
-};
-
 const createProductBox = () => {
   const productList = [ 'Size_1', 'Size_2', 'Size_3', 'Size_4', 'Size_5', 'Size_6' ];
   const productBox = document.querySelector('.productBox');
@@ -32,9 +23,9 @@ const createProductBox = () => {
 
 const main = () => {
   createProductBox();
-  createClientBox();
   createAddClientBox();
   productDetails();
+  clientsDetails();
 };
 
 window.onload = main;

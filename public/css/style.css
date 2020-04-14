@@ -127,3 +127,35 @@
   background-color: rgba(132, 39, 219, 0.4);
   border-radius: 7px;
 }
+
+.heading {
+  height: 70%;
+  display: flex;
+  font-size: xx-large;
+  font-family: sans-serif;
+}
+
+.address {
+  height: 30%;
+  font-size: larger;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.client-name {
+  width: 30%;
+  padding: 10px 0px 0px 15px;
+}
+
+.amount-due {
+  width: 30%;
+  padding-top: 10px;
+  font-weight: 200;
+  color:crimson;
+}
+
+.expand {
+  width: 40%;
+  text-align: end;
+  padding: 10px 25px 0px 0px;
+}
