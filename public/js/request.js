@@ -3,8 +3,7 @@ const getTransactions = clientId => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ clientId })
-  })
-    .then(res => res.json())
+  }).then(res => res.json())
     .then(transactions => showTransaction(transactions, clientId));
 };
 

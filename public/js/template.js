@@ -27,14 +27,14 @@ const createSizeBox = products => {
 };
 
 const getProductBox = transaction => {
-  const productBox = document.createElement('div');
-  productBox.className = 'product-box';
-  const sizeBox = createSizeBox(transaction.Products);
-  const invoiceBox = createInvoiceBox(transaction);
-  productBox.appendChild(sizeBox);
-  productBox.appendChild(invoiceBox);
-  return productBox;
-};
+   const productBox = document.createElement('div');
+   productBox.className = 'product-box';
+   const sizeBox = createSizeBox(transaction.Products);
+   const invoiceBox = createInvoiceBox(transaction);
+   productBox.appendChild(sizeBox);
+   productBox.appendChild(invoiceBox);
+   return productBox;
+}
 
 const showTransaction = (transactions, clientId) => {
   const box = document.createElement('div');
