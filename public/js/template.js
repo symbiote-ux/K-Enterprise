@@ -7,8 +7,7 @@ const createInvoiceBox = transaction => {
     <div class="payment">Amount Paid : ${transaction.Amount_Paid}</div>
     <div class="payment">Amount Left : ${transaction.Amount_Left}</div>
     <div class="payment">Date : ${transaction.Time_Stamp}</div>
-    <div class="print">+</div>
-    `;
+    <div class="print">+</div>`;
   return invoiceBox;
 };
 
@@ -27,14 +26,14 @@ const createSizeBox = products => {
 };
 
 const getProductBox = transaction => {
-   const productBox = document.createElement('div');
-   productBox.className = 'product-box';
-   const sizeBox = createSizeBox(transaction.Products);
-   const invoiceBox = createInvoiceBox(transaction);
-   productBox.appendChild(sizeBox);
-   productBox.appendChild(invoiceBox);
-   return productBox;
-}
+  const productBox = document.createElement('div');
+  productBox.className = 'product-box';
+  const sizeBox = createSizeBox(transaction.Products);
+  const invoiceBox = createInvoiceBox(transaction);
+  productBox.appendChild(sizeBox);
+  productBox.appendChild(invoiceBox);
+  return productBox;
+};
 
 const showTransaction = (transactions, clientId) => {
   const box = document.createElement('div');
