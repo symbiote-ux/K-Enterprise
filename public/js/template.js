@@ -1,18 +1,11 @@
 const createInvoiceBox = transaction => {
-  const {
-    Price,
-    Total_Amount,
-    Amount_Paid,
-    Amount_Left,
-    Time_Stamp
-  } = transaction;
   const invoiceBox = document.createElement('div');
   invoiceBox.innerHTML = `
-    <div>Price : ${Price}</div>
-    <div>Total Amount : ${Total_Amount}</div>
-    <div>Amount Paid : ${Amount_Paid}</div>
-    <div>Amount Left : ${Amount_Left}</div>
-    <div>Date : ${Time_Stamp}</div>`;
+    <div>Price : ${transaction.Price}</div>
+    <div>Total Amount : ${transaction.Total_Amount}</div>
+    <div>Amount Paid : ${transaction.Amount_Paid}</div>
+    <div>Amount Left : ${transaction.Amount_Left}</div>
+    <div>Date : ${transaction.Time_Stamp}</div>`;
   return invoiceBox;
 };
 
@@ -28,23 +21,28 @@ const createSizeBox = products => {
   return sizeBox;
 };
 
+const getProductBox = transaction => {
+  const productBox = document.createElement('div');
+  productBox.className = 'product-box';
+  const sizeBox = createSizeBox(transaction.Products);
+  const invoiceBox = createInvoiceBox(transaction);
+  productBox.appendChild(sizeBox);
+  productBox.appendChild(invoiceBox);
+  return productBox;
+};
+
 const showTransaction = (transactions, clientId) => {
   const box = document.createElement('div');
   box.className = 'transactionList';
   box.id = `${clientId}-tr`;
   transactions.forEach(transaction => {
-    const productBox = document.createElement('div');
-    productBox.className = 'product-box';
-    const sizeBox = createSizeBox(transaction.Products);
-    const invoiceBox = createInvoiceBox(transaction);
-    productBox.appendChild(sizeBox);
-    productBox.appendChild(invoiceBox);
+    const productBox = getProductBox(transaction);
     box.appendChild(productBox);
   });
   document.body.prepend(box);
 };
 
-const createClientInfoHtml = (details, box,client) => {
+const createClientInfoHtml = (details, box, client) => {
   const { Personal_Details, Total_Amount_Due } = details;
   const { Shop_Name, Address, Contact_No } = Personal_Details;
   box.innerHTML = `
@@ -65,7 +63,7 @@ const showClientDetails = details => {
     const box = document.createElement('div');
     box.className = 'clientInfo';
     box.id = client;
-    const boxHtml = createClientInfoHtml(details[client], box,client);
+    const boxHtml = createClientInfoHtml(details[client], box, client);
     clientBox.appendChild(boxHtml);
   }
 };
