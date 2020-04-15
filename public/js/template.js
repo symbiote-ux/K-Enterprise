@@ -11,9 +11,14 @@ const createInvoiceBox = transaction => {
     <div class="payment" style="background: skyblue;">Total Amount : ${transaction.Total_Amount}</div>
     <div class="payment" style="background:rgb(0, 128, 0,0.8)">Amount Paid : ${transaction.Amount_Paid}</div>
     <div class="payment" style="background:rgba(220, 20, 60, 0.8);">Amount Left : ${transaction.Amount_Left}</div>
-    <div class="payment" style="padding:0px 0px 0px 40px; ">Date : ${transaction.Time_Stamp}<span>
-    <img src="../images/print.png" class="print">
-    </span></div>`;
+    <div class="payment" style="display:flex;">
+    <div class="date">
+    Date : ${transaction.Time_Stamp}
+    </div>
+    <div class="print">
+    <img src="../images/print.png">
+    </div>
+    </div>`;
   return invoiceBox;
 };
 
