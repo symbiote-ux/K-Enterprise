@@ -1,3 +1,12 @@
+const getTransactions = clientId => {
+  fetch('/transactions', {
+    method:'POST',
+    headers: {'Content-Type' : 'application/json'},
+    body: JSON.stringify({clientId})
+  }).then(res => res.json())
+  .then(transactions => showTransactions(transactions,clientId));
+};
+
 const clientsDetails = () => {
   fetch('/clientsDetail')
     .then(res => res.json())

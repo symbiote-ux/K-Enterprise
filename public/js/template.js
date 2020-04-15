@@ -1,3 +1,10 @@
+const showTransactions = (transactions,clientId) => {
+  const box = document.createElement('div');
+  box.className = 'transaction-list';
+  box.id = `${clientId}-tr`;
+  document.querySelector('.screen').appendChild(box);
+};
+
 const showClientDetails = details => {
   const clientBox = document.querySelector('.clientInfoBox');
   for (const client in details) {
