@@ -1,8 +1,8 @@
-const showTransactions = (transactions,clientId) => {
+const showTransaction = (transactions, clientId) => {
   const box = document.createElement('div');
-  box.className = 'transaction-list';
+  box.className = 'transactionList';
   box.id = `${clientId}-tr`;
-  document.querySelector('.screen').appendChild(box);
+  document.body.prepend(box);
 };
 
 const showClientDetails = details => {
@@ -37,12 +37,4 @@ const showProductDetails = details => {
       infoBox.appendChild(box);
     }
   }
-};
-
-const showTransaction = (transactions, clientId) => {
-  console.log(clientId);
-  const box = document.createElement('div');
-  box.className = 'transactionList';
-  box.id = `${clientId}-tr`;
-  document.querySelector('.screen').appendChild(box);
 };

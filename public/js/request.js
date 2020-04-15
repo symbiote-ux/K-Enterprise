@@ -1,10 +1,11 @@
 const getTransactions = clientId => {
   fetch('/transactions', {
-    method:'POST',
-    headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify({clientId})
-  }).then(res => res.json())
-  .then(transactions => showTransactions(transactions,clientId));
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ clientId })
+  })
+    .then(res => res.json())
+    .then(transactions => showTransaction(transactions, clientId));
 };
 
 const clientsDetails = () => {
@@ -36,12 +37,3 @@ const clientsDetail = () => {
     .then(details => showClientDetails(details));
 };
 
-const getTransactions = clientId => {
-  fetch('/transactions', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ clientId })
-  })
-    .then(res => res.json())
-    .then(transactions => showTransaction(transactions, clientId));
-};
