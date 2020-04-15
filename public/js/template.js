@@ -1,33 +1,42 @@
-const showTransaction = (transactions, clientId) => {
-  const box = document.createElement('div');
-  box.className = 'transactionList';
-  box.id = `${clientId}-tr`;
-  transactions.forEach(transaction => {
-    const {
-      Products,
-      Price,
-      Total_Amount,
-      Amount_Paid,
-      Amount_Left,
-      Time_Stamp
-    } = transaction;
-    const productBox = document.createElement('div');
-    productBox.className = 'product-box';
-    const sizeBox = document.createElement('div');
-    const invoiceBox = document.createElement('div');
-    Products.forEach(product => {
-      const box = document.createElement('div');
-      box.innerHTML = `
-      <div>Size : ${product[Name]}</div>
-      <div>Weight : ${product[Weight]}</div>`;
-      sizeBox.appendChild(box);
-    });
-    invoiceBox.innerHTML = `
+const createInvoiceBox = transaction => {
+  const {
+    Price,
+    Total_Amount,
+    Amount_Paid,
+    Amount_Left,
+    Time_Stamp
+  } = transaction;
+  const invoiceBox = document.createElement('div');
+  invoiceBox.innerHTML = `
     <div>Price : ${Price}</div>
     <div>Total Amount : ${Total_Amount}</div>
     <div>Amount Paid : ${Amount_Paid}</div>
     <div>Amount Left : ${Amount_Left}</div>
     <div>Date : ${Time_Stamp}</div>`;
+  return invoiceBox;
+};
+
+const createSizeBox = products => {
+  const sizeBox = document.createElement('div');
+  products.forEach(product => {
+    const box = document.createElement('div');
+    box.innerHTML = `
+      <div>Size : ${product.Name}</div>
+      <div>Weight : ${product.Weight}</div>`;
+    sizeBox.appendChild(box);
+  });
+  return sizeBox;
+};
+
+const showTransaction = (transactions, clientId) => {
+  const box = document.createElement('div');
+  box.className = 'transactionList';
+  box.id = `${clientId}-tr`;
+  transactions.forEach(transaction => {
+    const productBox = document.createElement('div');
+    productBox.className = 'product-box';
+    const sizeBox = createSizeBox(transaction.Products);
+    const invoiceBox = createInvoiceBox(transaction);
     productBox.appendChild(sizeBox);
     productBox.appendChild(invoiceBox);
     box.appendChild(productBox);
