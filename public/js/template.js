@@ -11,7 +11,7 @@ const showClientDetails = details => {
      <div class="client-name">${client}</div>
      <div class="amount-due">Amount-Left : ${Total_Amount_Due}</div>
      <div class="expand">
-     <img src="../images/arrow.png" height="45px" width="45px">
+     <img src="../images/arrow.png" height="45px" width="45px" onclick="getTransactions('${client}')">
      </div>
     </div>
     <div class="address">${Shop_Name}, ${Address}, ${Contact_No}</div>`;
@@ -30,4 +30,12 @@ const showProductDetails = details => {
       infoBox.appendChild(box);
     }
   }
+};
+
+const showTransaction = (transactions, clientId) => {
+  console.log(clientId);
+  const box = document.createElement('div');
+  box.className = 'transactionList';
+  box.id = `${clientId}-tr`;
+  document.querySelector('.screen').appendChild(box);
 };

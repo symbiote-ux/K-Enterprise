@@ -26,3 +26,13 @@ const clientsDetail = () => {
     .then(res => res.json())
     .then(details => showClientDetails(details));
 };
+
+const getTransactions = clientId => {
+  fetch('/transactions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ clientId })
+  })
+    .then(res => res.json())
+    .then(transactions => showTransaction(transactions, clientId));
+};
