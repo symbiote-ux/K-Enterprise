@@ -1,3 +1,8 @@
+const removeTransaction = boxId => {
+  document.querySelector('#box').style.opacity = 1;
+  document.querySelector(`#${boxId}`).remove();
+};
+
 const createInvoiceBox = transaction => {
   const invoiceBox = document.createElement('div');
   invoiceBox.className = 'invoice-box';
@@ -36,12 +41,13 @@ const getProductBox = transaction => {
 };
 
 const showTransaction = (transactions, clientId) => {
+  document.querySelector('#box').style.opacity = 0.1;
   const box = document.createElement('div');
   box.className = 'transactionList';
   box.id = `${clientId}-tr`;
   const heading = document.createElement('div');
   heading.className = 'detailTitle';
-  heading.innerHTML = `Client Name : ${clientId} `;
+  heading.innerHTML = `Client Name : ${clientId}<span onclick="removeTransaction('${clientId}-tr')">+<span>`;
   box.appendChild(heading);
   const transactionList = document.createElement('div');
   transactionList.className = 'transactions';

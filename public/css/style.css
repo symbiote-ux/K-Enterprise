@@ -173,6 +173,7 @@ img:hover {
   box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.3);
   border-radius: 7px;
   background-color: white;
+  z-index: 1;
 }
 
 .product-box {
