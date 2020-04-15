@@ -196,7 +196,7 @@ img:hover {
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
-  height: 100%;
+  height: 95%;
   width: 40%;
 }
 
@@ -207,23 +207,45 @@ img:hover {
 
 .name-weight {
   height: 20%;
-  width: 100%;
+  width: 98%;
   display: flex;
+  margin: 1%;
 }
 
 .size {
-  width: 46%;
+  width: 45%;
   margin: 1%;
   text-align: center;
+  padding-top: 5px;
   border-radius: 5px;
   box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.3);
 }
 
 .payment {
-  width: 90%;
+  width: 98%;
   height: 15%;
-  margin: 1%;
+  margin-bottom: 1%;
   border-radius: 5px;
   text-align: center;
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: 20px;
   box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.hide {
+  height: 40px;
+  width: 50px;
+  margin-left: 35%;
+}
+
+.tr-title {
+  margin-left: 32%;
+  font-size: 30px;
+}
+
+.print {
+  height: 25px;
+  width: 28px;
+  margin: -1% 0% 0% 25%;
 }

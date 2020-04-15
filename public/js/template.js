@@ -8,11 +8,12 @@ const createInvoiceBox = transaction => {
   invoiceBox.className = 'invoice-box';
   invoiceBox.innerHTML = `
     <div class="payment">Price : ${transaction.Price}</div>
-    <div class="payment">Total Amount : ${transaction.Total_Amount}</div>
-    <div class="payment">Amount Paid : ${transaction.Amount_Paid}</div>
-    <div class="payment">Amount Left : ${transaction.Amount_Left}</div>
-    <div class="payment">Date : ${transaction.Time_Stamp}</div>
-    <div class="print">+</div>`;
+    <div class="payment" style="background: skyblue;">Total Amount : ${transaction.Total_Amount}</div>
+    <div class="payment" style="background:rgb(0, 128, 0,0.8)">Amount Paid : ${transaction.Amount_Paid}</div>
+    <div class="payment" style="background:rgba(220, 20, 60, 0.8);">Amount Left : ${transaction.Amount_Left}</div>
+    <div class="payment" style="padding:0px 0px 0px 40px; ">Date : ${transaction.Time_Stamp}<span>
+    <img src="../images/print.png" class="print">
+    </span></div>`;
   return invoiceBox;
 };
 
@@ -46,8 +47,10 @@ const showTransaction = (transactions, clientId) => {
   box.className = 'transactionList';
   box.id = `${clientId}-tr`;
   const heading = document.createElement('div');
-  heading.className = 'detailTitle';
-  heading.innerHTML = `Client Name : ${clientId}<span onclick="removeTransaction('${clientId}-tr')">+<span>`;
+  heading.className = 'tr-title';
+  heading.innerHTML = `Client Name : ${clientId}<span onclick="removeTransaction('${clientId}-tr')">
+  <img src="../images/cross.png" class="hide">
+  <span>`;
   box.appendChild(heading);
   const transactionList = document.createElement('div');
   transactionList.className = 'transactions';
