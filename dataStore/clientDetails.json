@@ -9,6 +9,13 @@
       {
         "Products": [
           { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_1", "Weight": 4 },
+          { "Name": "Size_1", "Weight": 4 },
           { "Name": "Size_2", "Weight": 5 }
         ],
         "Price": 80,

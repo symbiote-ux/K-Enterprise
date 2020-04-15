@@ -1,21 +1,26 @@
 const createInvoiceBox = transaction => {
   const invoiceBox = document.createElement('div');
+  invoiceBox.className = 'invoice-box';
   invoiceBox.innerHTML = `
-    <div>Price : ${transaction.Price}</div>
-    <div>Total Amount : ${transaction.Total_Amount}</div>
-    <div>Amount Paid : ${transaction.Amount_Paid}</div>
-    <div>Amount Left : ${transaction.Amount_Left}</div>
-    <div>Date : ${transaction.Time_Stamp}</div>`;
+    <div class="payment">Price : ${transaction.Price}</div>
+    <div class="payment">Total Amount : ${transaction.Total_Amount}</div>
+    <div class="payment">Amount Paid : ${transaction.Amount_Paid}</div>
+    <div class="payment">Amount Left : ${transaction.Amount_Left}</div>
+    <div class="payment">Date : ${transaction.Time_Stamp}</div>
+    <div class="print">+</div>
+    `;
   return invoiceBox;
 };
 
 const createSizeBox = products => {
   const sizeBox = document.createElement('div');
+  sizeBox.className = 'size-box';
   products.forEach(product => {
     const box = document.createElement('div');
+    box.className = 'name-weight';
     box.innerHTML = `
-      <div>Size : ${product.Name}</div>
-      <div>Weight : ${product.Weight}</div>`;
+      <div class="size">Size : ${product.Name}</div>
+      <div class="size">Weight : ${product.Weight}</div>`;
     sizeBox.appendChild(box);
   });
   return sizeBox;
@@ -35,10 +40,17 @@ const showTransaction = (transactions, clientId) => {
   const box = document.createElement('div');
   box.className = 'transactionList';
   box.id = `${clientId}-tr`;
+  const heading = document.createElement('div');
+  heading.className = 'detailTitle';
+  heading.innerHTML = `Client Name : ${clientId} `;
+  box.appendChild(heading);
+  const transactionList = document.createElement('div');
+  transactionList.className = 'transactions';
   transactions.forEach(transaction => {
     const productBox = getProductBox(transaction);
-    box.appendChild(productBox);
+    transactionList.appendChild(productBox);
   });
+  box.appendChild(transactionList);
   document.body.prepend(box);
 };
 
