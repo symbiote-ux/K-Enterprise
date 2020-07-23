@@ -15,9 +15,6 @@ const createInvoiceBox = transaction => {
     <div class="date">
     Date : ${transaction.Time_Stamp}
     </div>
-    <div class="print">
-    <img src="../images/print.png">
-    </div>
     </div>`;
   return invoiceBox;
 };
